@@ -1,0 +1,12 @@
+Clients :
+Roger
+Vincent
+Bob
+Plats :
+Poutine 10.5
+Salade 5.5
+Hamburger 12
+Commandes :
+Roger Hamburger 1
+Vincent Salade 1
+Vincent Poutine 1
