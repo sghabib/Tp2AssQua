@@ -13,7 +13,6 @@ public class Main {
 
 		String cheminAbsolu = chemin.toAbsolutePath().toString();
 
-		System.out.println(cheminAbsolu);
 
 		ArrayList<String> clients = new ArrayList<String>();
 		Hashtable<String, Plats> plats = new Hashtable<String, Plats>();
@@ -27,7 +26,6 @@ public class Main {
 			while (!(ligne = ficLecture.readLine()).equals("Plats :")) {
 
 				clients.add(ligne);
-				System.out.println(ligne);
 
 			}
 
@@ -35,8 +33,6 @@ public class Main {
 
 				String[] ligneDiviser = ligne.split(" ");
 				plats.put(ligneDiviser[0], new Plats(ligneDiviser[0], Double.parseDouble(ligneDiviser[1])));
-
-				System.out.println(ligne);
 
 			}
 			while (!(ligne = ficLecture.readLine()).equals("Fin")) {
@@ -67,8 +63,6 @@ public class Main {
 					throw new Exception("Le fichier ne respecte pas le format demandé !");
 
 				}
-
-				System.out.println(ligne);
 			}
 
 			ficLecture.close();
@@ -78,6 +72,26 @@ public class Main {
 			System.out.println(err);
 
 		}
+		
+		System.out.println("Bienvenue chez Barette!");
+		System.out.println("\nFactures : ");
+		
+		for (String client : clients) {
+			
+			double total = 0;
+			
+			for (Commandes commande : commandes) {
+				
+				if (commande.getClient().equals(client)) {
+					total += commande.getQty() * commande.getPlat().getPrix();
+				}
+			}
+			
+			System.out.println(client + " " + total + "$");
+
+		}
+		
+		
 
 	}
 
