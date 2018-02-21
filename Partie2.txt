@@ -1,0 +1,5 @@
+La partie 2 du projet devrait être une continuité de la partie 1. 
+C'est à dire, il fallait continuer à travailler sur le même dossier de la partie 1 du projet.
+Pour l'instant, vous n'avez pas besoins d'apporter des corrections à cela, si ce n'est importer votre partie 1 et l'inclure dans cette partie.
+
+Merci
